@@ -1,0 +1,27 @@
+#include<stdio.h>
+
+int main() {
+    float salario_base = 3000.00;
+    float refeição_diaria = 20.00;
+    float reajuste_salario = 0.05;
+    float novo_refeição = 28.00;
+    int dias_descanso_semanal = 10;
+    int dias_mes = 30;
+    int horas_diarias = 6;
+    int dias_trabalhados_semana = 5;
+    
+    float novo_salario = salario_base * (1 + reajuste_salario);
+    
+    int dias_trabalhados_mes = dias_mes - dias_descanso_semanal;
+    
+    float novo_valor_total = novo_salario + (novo_refeição * dias_trabalhados_mes);
+    
+    printf(" 1. O novo valor salarial recebido é:  R$ %2.f\n", novo_valor_total);
+    
+    float valor_por_hora = novo_valor_total / (dias_trabalhados_mes * horas_diarias * dias_trabalhados_semana);
+    
+    printf("2. O valor pago por hora é:  R$ %f\n", valor_por_hora);
+    
+    
+    return 0;
+}
